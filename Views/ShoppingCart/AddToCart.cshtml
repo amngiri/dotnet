@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewBag.Title = "AddToCart";
+}
+
+<h2>AddToCart</h2>
+
+<div class="container">
+     
+    <form method="post" action="/shoppingcart/addtocart">
+        <div class="form-group">
+            <label for="email">Product:</label>
+            <input type="text" class="form-control" id="id" 
+                    value="@ViewBag.item.ProductId"   name="id">
+        </div>
+        <div class="form-group">
+            <label for="pwd">Quantity:</label>
+            <input type="text" class="form-control" id="quantity" 
+                   value="@ViewBag.item.Quantity"  placeholder="Enter quantity" name="quantity">
+        </div>
+       
+        <button type="submit" class="btn btn-default">Submiy</button>
+    </form>
+</div>
